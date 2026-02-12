@@ -234,11 +234,16 @@ z_index = -1
 position = Vector2(914, -24)
 texture = ExtResource("8_5vw27")
 
-[node name="caisses" type="Sprite2D" parent="." unique_id=1989922872]
-z_index = 1
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1599024461]
 position = Vector2(62, 666)
 scale = Vector2(0.5, 0.5)
+
+[node name="caisses" type="Sprite2D" parent="CharacterBody2D2" unique_id=1989922872]
+z_index = 1
 texture = ExtResource("9_4c57u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D2" unique_id=1036251103]
+polygon = PackedVector2Array(0, 0, -14, -14, -32, -14, -32, 14, 30, 14, 30, -2)
 
 [node name="bbois" type="Sprite2D" parent="." unique_id=2094147879]
 z_index = 1
