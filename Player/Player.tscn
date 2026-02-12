@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://58xaamdgpjyu"]
+
+[ext_resource type="Texture2D" uid="uid://bbvg10kmwqkal" path="res://Pixel map/Pixel Platformer Pack/Raw Files/Player Idle.png" id="1_xhfnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rwas"]
+size = Vector2(41.5, 53)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1143294335]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1078162744]
+position = Vector2(39.25, 54.5)
+shape = SubResource("RectangleShape2D_0rwas")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115999260]
+position = Vector2(40.000015, 41.00001)
+scale = Vector2(2.53125, 2.53125)
+texture = ExtResource("1_xhfnw")
+hframes = 5

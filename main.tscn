@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://yll0ub14k3gl"]
 
-[ext_resource type="PackedScene" uid="uid://58xaamdgpjyu" path="res://Player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://58xaamdgpjyu" path="res://Player/Player.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bwfsxxb45rd0k" path="res://Tilemap/4.png" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1502451694]
 position = Vector2(571, 310)
 
 [node name="Player" parent="." unique_id=1143294335 instance=ExtResource("1_ig7tw")]
+position = Vector2(-538, -279)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1911989756]
 position = Vector2(2, 27)
@@ -13,3 +15,8 @@ limit_left = 0
 limit_top = 0
 limit_right = 1464
 limit_bottom = 985
+
+[node name="4" type="Sprite2D" parent="." unique_id=86072792]
+z_index = -1
+position = Vector2(497, 274)
+texture = ExtResource("2_0xm2m")
