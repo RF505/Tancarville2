@@ -127,11 +127,11 @@ position = Vector2(-298, -32)
 scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1911989756]
-position = Vector2(83, 40)
-limit_left = 4
+position = Vector2(43, 40)
+limit_left = 0
 limit_top = 0
-limit_right = 2016
-limit_bottom = 1200
+limit_right = 1464
+limit_bottom = 985
 
 [node name="4" type="Sprite2D" parent="." unique_id=86072792]
 z_index = -1
