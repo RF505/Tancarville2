@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bwfsxxb45rd0k" path="res://Tilemap/sky/4.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dcuw66jw0p4ue" path="res://Pixel map/Pixel Platformer Pack/Raw Files/Ground Tilesheet.png" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dikidh800fsv" path="res://Tilemap/asset/fountain.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://lhv2wk8fwhk4" path="res://Tilemap/asset/broken house 1.png" id="5_272bh"]
+[ext_resource type="Texture2D" uid="uid://dvsw88emgdvnc" path="res://Tilemap/asset/broken house 2.png" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://bqonum8lovxt" path="res://Tilemap/asset/broken hous 3.png" id="7_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("3_h2yge")
@@ -148,3 +151,18 @@ physics_quadrant_size = 8
 z_index = -1
 position = Vector2(173, 1)
 texture = ExtResource("4_1bvp3")
+
+[node name="broken house 1" type="Sprite2D" parent="." unique_id=1794895830]
+z_index = -1
+position = Vector2(-39.5, -17)
+texture = ExtResource("5_272bh")
+
+[node name="broken house 2" type="Sprite2D" parent="." unique_id=1911947345]
+z_index = -1
+position = Vector2(57.5, -28)
+texture = ExtResource("6_5vw27")
+
+[node name="broken house 3" type="Sprite2D" parent="." unique_id=1326775661]
+z_index = -1
+position = Vector2(334, -3)
+texture = ExtResource("7_kek77")
