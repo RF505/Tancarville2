@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lhv2wk8fwhk4" path="res://Tilemap/asset/broken house 1.png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://dvsw88emgdvnc" path="res://Tilemap/asset/broken house 2.png" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://bqonum8lovxt" path="res://Tilemap/asset/broken hous 3.png" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://cnnu6y0mj15dj" path="res://Tilemap/asset/elevator.png" id="8_5vw27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("3_h2yge")
@@ -139,7 +140,7 @@ limit_bottom = 1198
 
 [node name="4" type="Sprite2D" parent="." unique_id=86072792]
 z_index = -1
-position = Vector2(497, 274)
+position = Vector2(559, 252)
 texture = ExtResource("2_0xm2m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=513802411]
@@ -166,3 +167,8 @@ texture = ExtResource("6_5vw27")
 z_index = -1
 position = Vector2(334, -3)
 texture = ExtResource("7_kek77")
+
+[node name="elevator" type="Sprite2D" parent="." unique_id=1600412889]
+z_index = -1
+position = Vector2(914, -24)
+texture = ExtResource("8_5vw27")
