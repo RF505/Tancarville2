@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://yll0ub14k3gl"]
 
 [ext_resource type="PackedScene" uid="uid://58xaamdgpjyu" path="res://Player/Player.tscn" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://bwfsxxb45rd0k" path="res://Tilemap/4.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bwfsxxb45rd0k" path="res://Tilemap/sky/4.png" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1502451694]
 position = Vector2(571, 310)
