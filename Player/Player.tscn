@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://swxdo3dhk2pe" path="res://Pixel map/Pixel Platformer Pack/SpriteIDLERUN.png" id="2_q3lat"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rwas"]
-size = Vector2(41.5, 53)
+size = Vector2(27.75, 32.5)
 
 [sub_resource type="Animation" id="Animation_tok1r"]
 length = 0.001
@@ -68,12 +68,12 @@ _data = {
 script = ExtResource("1_q3lat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1078162744]
-position = Vector2(39.25, 54.5)
+position = Vector2(27.125, 65.25)
 shape = SubResource("RectangleShape2D_0rwas")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115999260]
-position = Vector2(40.000015, 41.00001)
-scale = Vector2(2.53125, 2.53125)
+position = Vector2(27.750008, 53.25002)
+scale = Vector2(1.7656245, 1.7656245)
 texture = ExtResource("2_q3lat")
 hframes = 10
 

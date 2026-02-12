@@ -185,13 +185,14 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1911989756]
 position = Vector2(83, 40)
+zoom = Vector2(3, 3)
 limit_left = 7
 limit_top = 56
 limit_right = 2108
 limit_bottom = 1198
 
 [node name="4" type="Sprite2D" parent="." unique_id=86072792]
-z_index = -1
+z_index = -2
 position = Vector2(542, 252)
 texture = ExtResource("2_0xm2m")
 

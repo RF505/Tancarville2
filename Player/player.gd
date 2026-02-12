@@ -3,9 +3,9 @@ extends CharacterBody2D
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-const MAX_STEP_HEIGHT = 16
+const SPEED = 100.0
+const JUMP_VELOCITY = -200.0
+const MAX_STEP_HEIGHT = 5
 
 func _physics_process(delta: float) -> void:
 	# --- Gravité ---
