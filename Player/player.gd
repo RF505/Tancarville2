@@ -16,8 +16,44 @@ var e_ref = null
 var is_singing = false
 var shader_global = null
 
+var object_x = null
+var object_y = null
+var object_z = null
+var object_a = null
+var object_xx = null
+var object_yy = null
+var object_zz = null
+var object_aa = null
+
 func _ready():
 	await get_tree().process_frame
+	
+	object_x = get_node_or_null("../../../Main/brokenfountain")
+	object_y = get_node_or_null("../../../Main/brokenhouse1")
+	object_z = get_node_or_null("../../../Main/brokenhouse2")
+	object_a = get_node_or_null("../../../Main/brokenhouse3")
+	object_xx = get_node_or_null("../../../Main/Maison6")
+	object_yy = get_node_or_null("../../../Main/Maison7")
+	object_zz = get_node_or_null("../../../Main/Maison8")
+	object_aa = get_node_or_null("../../../Main/Maison9")
+	
+	if object_x:
+		print("✅ Objet X trouvé")
+	if object_y:
+		print("✅ Objet Y trouvé")
+	if object_z:
+		print("✅ Objet Z trouvé")
+	if object_a:
+		print("✅ Objet A trouvé")
+		
+	if object_xx:
+		print("✅ Objet XX trouvé")
+	if object_yy:
+		print("✅ Objet YY trouvé")
+	if object_zz:
+		print("✅ Objet ZZ trouvé")
+	if object_aa:
+		print("✅ Objet AA trouvé")
 	
 	# Charger le son du chant
 	if sing_sound:
@@ -162,6 +198,32 @@ func start_singing():
 	if sing_sound:
 		sing_sound.play()
 		print("🎵 Son de chant joué !")
+		
+	# CACHER LES 4 OBJETS
+	if object_x:
+		object_x.visible = false
+		print("👻 Objet X caché")
+	if object_y:
+		object_y.visible = false
+		print("👻 Objet Y caché")
+	if object_z:
+		object_z.visible = false
+		print("👻 Objet Z caché")
+	if object_a:
+		object_a.visible = false
+		print("👻 Objet A caché")
+	if object_xx:
+		object_xx.visible = true
+		print("👻 Objet XX affiché")
+	if object_yy:
+		object_yy.visible = true
+		print("👻 Objet YY affiché")
+	if object_zz:
+		object_zz.visible = true
+		print("👻 Objet ZZ affiché")
+	if object_aa:
+		object_aa.visible = true
+		print("👻 Objet AA affiché")
 	
 	# Activer l'effet shader
 	if shader_global:
