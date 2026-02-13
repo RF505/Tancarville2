@@ -372,8 +372,6 @@ stream = ExtResource("19_a6jrf")
 position = Vector2(-247, -58)
 script = ExtResource("19_82xsv")
 
-[node name="platform" parent="." unique_id=1550666870 instance=ExtResource("20_82xsv")]
-
 [node name="CPUParticles2D_eau" type="CPUParticles2D" parent="." unique_id=925539673]
 position = Vector2(1437, 695)
 amount = 15
@@ -429,3 +427,11 @@ shape = SubResource("RectangleShape2D_1u8w0")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=2079176540]
 stream = ExtResource("22_d13ii")
+
+[node name="platform3" parent="." unique_id=2070912799 instance=ExtResource("20_82xsv")]
+position = Vector2(517, 665)
+
+[node name="platform2" parent="." unique_id=117194227 instance=ExtResource("20_82xsv")]
+position = Vector2(699, 17)
+
+[node name="platform" parent="." unique_id=1550666870 instance=ExtResource("20_82xsv")]
