@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxgerl5j4dyfp"
-path="res://.godot/imported/platform2.png-77b84ae8ce4087958cc110b7e78657c1.ctex"
+uid="uid://b0lnv6lc7rly1"
+path="res://.godot/imported/Sprite-0002.png-56a77635a931df8ac2e4ea8258149953.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressource/platform2.png"
-dest_files=["res://.godot/imported/platform2.png-77b84ae8ce4087958cc110b7e78657c1.ctex"]
+source_file="res://Pixel map/Pixel Platformer Pack/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-56a77635a931df8ac2e4ea8258149953.ctex"]
 
 [params]
 
