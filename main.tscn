@@ -16,10 +16,11 @@
 [ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ccd0pixci0bws" path="res://Tilemap/asset/corde.png" id="14_w48qg"]
 [ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="15_2cqfq"]
-[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" path="res://DialogueBox.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
-[ext_resource type="Script" path="res://easter_egg.gd" id="19_82xsv"]
+[ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
+[ext_resource type="AudioStream" uid="uid://cil2b5ikb6my4" path="res://Ressource/son.mp3" id="19_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://2ux7efy4b6gg" path="res://platform.tscn" id="20_82xsv"]
 [ext_resource type="Script" uid="uid://btpll384encv5" path="res://area_2d.gd" id="21_ryguw"]
 [ext_resource type="AudioStream" uid="uid://biweo12mrvp42" path="res://song/videoplayback.wav" id="22_d13ii"]
@@ -364,6 +365,9 @@ limit_top = 56
 limit_right = 2108
 limit_bottom = 1198
 
+[node name="Son" type="AudioStreamPlayer" parent="Game/Player" unique_id=792291686]
+stream = ExtResource("19_a6jrf")
+
 [node name="Easter egg" parent="." unique_id=1615375583 instance=ExtResource("18_cegan")]
 position = Vector2(-247, -58)
 script = ExtResource("19_82xsv")
@@ -390,33 +394,32 @@ angular_velocity_min = -90.0
 angular_velocity_max = 90.0
 color_ramp = SubResource("Gradient_ryguw")
 
-[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1555019479]
+[node name="Maison" type="Sprite2D" parent="." unique_id=1555019479]
 z_index = -1
 position = Vector2(697, 655)
 texture = ExtResource("5_272bh")
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1321616758]
+[node name="Maison2" type="Sprite2D" parent="." unique_id=1321616758]
 z_index = -1
 position = Vector2(499, 663)
 texture = ExtResource("25_a6jrf")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=792990393]
+[node name="Maison3" type="Sprite2D" parent="." unique_id=792990393]
 z_index = -1
 position = Vector2(459, 661)
 texture = ExtResource("7_kek77")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=498006229]
+[node name="Maison4" type="Sprite2D" parent="." unique_id=498006229]
 z_index = -1
 position = Vector2(579, 649)
 texture = ExtResource("24_lswn8")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=710484533]
+[node name="Maison5" type="Sprite2D" parent="." unique_id=710484533]
 z_index = -1
 position = Vector2(380, 645)
 texture = ExtResource("23_0odxb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=240253926]
-visible = false
 position = Vector2(318, 624)
 script = ExtResource("21_ryguw")
 
