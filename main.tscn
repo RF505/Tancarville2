@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
 [ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
 [ext_resource type="PackedScene" uid="uid://2ux7efy4b6gg" path="res://platform.tscn" id="20_82xsv"]
-[ext_resource type="Script" uid="uid://dty3y4qx6ul0d" path="res://shader_globals_override.gd" id="21_getpj"]
 [ext_resource type="Script" uid="uid://btpll384encv5" path="res://area_2d.gd" id="21_ryguw"]
 [ext_resource type="AudioStream" uid="uid://biweo12mrvp42" path="res://song/videoplayback.wav" id="22_d13ii"]
 
@@ -398,6 +397,3 @@ shape = SubResource("RectangleShape2D_1u8w0")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=2079176540]
 stream = ExtResource("22_d13ii")
-
-[node name="ShaderGlobalsOverride" type="ShaderGlobalsOverride" parent="." unique_id=841239542]
-script = ExtResource("21_getpj")
