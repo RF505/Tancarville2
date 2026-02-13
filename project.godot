@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [global]
 
-player_position=Vector2(0, 0)
+player_position=Vector2(1, 8964)
 color_radius=0.0
 desaturation_strength=1.0
 

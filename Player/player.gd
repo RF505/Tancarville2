@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var footsteps = $Footsteps # <-- AJOUTÉ ICI
+@onready var tilemap = $"../../Main/TileMap" # <-- Ajuste le chemin vers ta TileMap
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -200.0
@@ -128,3 +129,16 @@ func _physics_process(delta: float) -> void:
 			e_ref.modulate.a = move_toward(e_ref.modulate.a, 1.0, delta * 5.0)
 		else:
 			e_ref.modulate.a = move_toward(e_ref.modulate.a, 0.0, delta * 5.0)
+	update_shader_player_pos()
+
+func update_shader_player_pos():
+	if tilemap and tilemap.material is ShaderMaterial:
+		# On récupère la position du joueur à l'écran (Viewport)
+		var pos_screen = get_global_transform_with_canvas().origin
+		
+		# On normalise cette position pour le Shader (0.0 à 1.0)
+		var screen_size = get_viewport_rect().size
+		var normalized_pos = pos_screen / screen_size
+		
+		# On envoie la valeur au shader
+		tilemap.material.set_shader_parameter("player_position", normalized_pos)
