@@ -16,10 +16,10 @@
 [ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ccd0pixci0bws" path="res://Tilemap/asset/corde.png" id="14_w48qg"]
 [ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="15_2cqfq"]
-[ext_resource type="PackedScene" path="res://DialogueBox.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
-[ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
+[ext_resource type="Script" path="res://easter_egg.gd" id="19_82xsv"]
 [ext_resource type="AudioStream" uid="uid://cil2b5ikb6my4" path="res://Ressource/son.mp3" id="19_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://2ux7efy4b6gg" path="res://platform.tscn" id="20_82xsv"]
 [ext_resource type="Script" uid="uid://btpll384encv5" path="res://area_2d.gd" id="21_ryguw"]
@@ -429,3 +429,4 @@ shape = SubResource("RectangleShape2D_1u8w0")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=2079176540]
 stream = ExtResource("22_d13ii")
+max_distance = 302.0
