@@ -15,13 +15,14 @@
 [ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ccd0pixci0bws" path="res://Tilemap/asset/corde.png" id="14_w48qg"]
 [ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="15_2cqfq"]
-[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" path="res://DialogueBox.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
 [ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
-[ext_resource type="Texture2D" uid="uid://b64q1c7f8orpi" path="res://Ressource/platforme.png" id="20_getpj"]
-[ext_resource type="Script" uid="uid://bt3gqrpw8dfpt" path="res://platform.gd" id="21_d13ii"]
-[ext_resource type="Texture2D" uid="uid://dvkdpbx5n16y4" path="res://Ressource/platform2.png" id="21_ryguw"]
+[ext_resource type="Texture2D" uid="uid://h8oagx8qm52k" path="res://Ressource/platforme.png" id="20_getpj"]
+[ext_resource type="Script" uid="uid://np3sqjbtroux" path="res://platform.gd" id="21_d13ii"]
+[ext_resource type="Texture2D" uid="uid://bxgerl5j4dyfp" path="res://Ressource/platform2.png" id="21_ryguw"]
+[ext_resource type="Texture2D" uid="uid://pjtu8rtgd6jc" path="res://Ressource/keyboard_key_e.png" id="23_d13ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_074og"]
 texture = ExtResource("17_yaehf")
@@ -365,12 +366,17 @@ shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platform/Area2D" unique_id=653143647]
 position = Vector2(113, 8)
-polygon = PackedVector2Array(0, 0, 4, -5, 23, -5, 27, 0)
+polygon = PackedVector2Array(0, 0, 4, -6, 23, -6, 27, 0)
 
 [node name="platform2" type="Sprite2D" parent="platform" unique_id=992422021]
-self_modulate = Color(1, 1, 1, 0)
+z_index = -1
 position = Vector2(126, -9)
 texture = ExtResource("21_ryguw")
+
+[node name="e" type="Sprite2D" parent="platform" unique_id=1359941940]
+position = Vector2(126.999985, -36.00001)
+scale = Vector2(0.02999995, 0.02999995)
+texture = ExtResource("23_d13ii")
 
 [node name="CPUParticles2D_eau" type="CPUParticles2D" parent="." unique_id=925539673]
 position = Vector2(1437, 695)
