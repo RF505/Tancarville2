@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dsbg07urbv50v"]
+
+[ext_resource type="Texture2D" uid="uid://d0at5gh14cy2l" path="res://Tilemap/asset/bateau.png" id="1_2cokx"]
+
+[node name="BoatCollision" type="CharacterBody2D" unique_id=353224602]
+scale = Vector2(0.2735829, 0.2688409)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1031544664]
+polygon = PackedVector2Array(-372.83057, 230.61987, -456.8999, 308.7329, -299.72656, 360.80835, 40.20703, 379.40674, 270.48438, 338.49023, 336.27832, 286.4148, 339.9331, 245.49854, 431.31348, 212.02148, 413.0371, 193.4231, 215.65674, 226.90015, -168.13916, 249.21802)
+
+[node name="bateau" type="Sprite2D" parent="." unique_id=2127655131]
+z_index = -1
+texture = ExtResource("1_2cokx")

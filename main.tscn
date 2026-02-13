@@ -10,9 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://cnnu6y0mj15dj" path="res://Tilemap/asset/elevator.png" id="8_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dh8xd5fnd6vdg" path="res://Tilemap/asset/caisses.png" id="9_4c57u"]
 [ext_resource type="Texture2D" uid="uid://ctim12q0kvg7u" path="res://Tilemap/asset/bbois.png" id="10_efxa6"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://d0at5gh14cy2l" path="res://Tilemap/asset/bateau.png" id="11_efxa6"]
 [ext_resource type="Texture2D" uid="uid://dtlntpb3qnsxb" path="res://Tilemap/asset/plateforme.png" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
+=======
+[ext_resource type="PackedScene" uid="uid://dsbg07urbv50v" path="res://boat_collision.tscn" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="13_ycdy4"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("3_h2yge")
@@ -253,10 +259,10 @@ position = Vector2(81, 669)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_efxa6")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1020042500]
+[node name="BoatCollision" parent="." unique_id=353224602 instance=ExtResource("11_dg77c")]
 position = Vector2(1467, 609)
-scale = Vector2(0.2735829, 0.2688409)
 
+<<<<<<< Updated upstream
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1656504696]
 polygon = PackedVector2Array(-372.83057, 230.61987, -456.8999, 308.7329, -299.72656, 360.80835, 40.20703, 379.40674, 270.48438, 338.49023, 336.27832, 286.4148, 339.9331, 245.49854, 431.31348, 212.02148, 413.0371, 193.4231, 215.65674, 226.90015, -168.13916, 249.21802)
 
@@ -287,3 +293,8 @@ target_position = Vector2(0, 10)
 
 [node name="WaitTimer" type="Timer" parent="AnimatableBody2D" unique_id=1908757878]
 one_shot = true
+=======
+[node name="Boat Easter egg" parent="." unique_id=1615375583 instance=ExtResource("12_ycdy4")]
+position = Vector2(-254, -59)
+script = ExtResource("13_ycdy4")
+>>>>>>> Stashed changes

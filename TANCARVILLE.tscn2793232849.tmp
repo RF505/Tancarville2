@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bl67ymr86rksn"]
+
+[ext_resource type="PackedScene" uid="uid://58xaamdgpjyu" path="res://Player/Player.tscn" id="1_24ots"]
+[ext_resource type="PackedScene" uid="uid://8t1j3smolpld" path="res://fullbox.tscn" id="1_vlirp"]
+[ext_resource type="Texture2D" uid="uid://c3p0ahhnqptkl" path="res://Ressource/tancarville.png" id="2_vlirp"]
+[ext_resource type="Script" uid="uid://cpde2j410wnu5" path="res://TancarvilleTrigger.gd" id="4_qw4ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o16t3"]
+size = Vector2(32, 20)
+
+[node name="Tancarville" type="Node2D" unique_id=316568126]
+
+[node name="full box" parent="." unique_id=825217385 instance=ExtResource("1_vlirp")]
+
+[node name="Player" parent="." unique_id=1143294335 instance=ExtResource("1_24ots")]
+position = Vector2(3, 90)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=707062635]
+position = Vector2(83, 40)
+zoom = Vector2(3, 3)
+limit_left = -8
+limit_top = -11
+limit_right = 459
+limit_bottom = 186
+
+[node name="TheTancarville" type="CharacterBody2D" parent="." unique_id=385883684]
+position = Vector2(279, 153)
+
+[node name="Sprite2D" type="Sprite2D" parent="TheTancarville" unique_id=1131936353]
+z_index = -1
+position = Vector2(0, 3)
+scale = Vector2(0.505, 0.505)
+texture = ExtResource("2_vlirp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=764126546]
+position = Vector2(279, 153)
+script = ExtResource("4_qw4ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=341153176]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_o16t3")
+
+[node name="Label" type="Label" parent="Area2D" unique_id=1404220468]
+visible = false
+offset_left = -60.0
+offset_top = -63.0
+offset_right = 24.0
+offset_bottom = -40.0
+text = "Tancarville"
+
+[node name="Label2" type="Label" parent="Area2D" unique_id=424835120]
+visible = false
+offset_left = 28.0
+offset_top = -63.0
+offset_right = 68.0
+offset_bottom = -40.0
+text = "2"
