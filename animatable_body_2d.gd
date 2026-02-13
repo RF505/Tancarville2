@@ -3,7 +3,7 @@ extends AnimatableBody2D
 @export var vitesse = 100.0
 @export var temps_pause = 5.0
 
-@onready var ray_sol = $RayCast2Dsold
+@onready var ray_sol = $RayCast2Dsol
 @onready var timer = $WaitTimer
 
 var pos_haut : Vector2
