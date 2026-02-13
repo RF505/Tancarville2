@@ -19,10 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
 [ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
-[ext_resource type="Texture2D" uid="uid://h8oagx8qm52k" path="res://Ressource/platforme.png" id="20_getpj"]
-[ext_resource type="Script" uid="uid://np3sqjbtroux" path="res://platform.gd" id="21_d13ii"]
-[ext_resource type="Texture2D" uid="uid://bxgerl5j4dyfp" path="res://Ressource/platform2.png" id="21_ryguw"]
-[ext_resource type="Texture2D" uid="uid://pjtu8rtgd6jc" path="res://Ressource/keyboard_key_e.png" id="23_d13ii"]
+[ext_resource type="PackedScene" uid="uid://2ux7efy4b6gg" path="res://platform.tscn" id="20_82xsv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_074og"]
 texture = ExtResource("17_yaehf")
@@ -199,9 +196,6 @@ tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_efxa6")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
-size = Vector2(27, 5)
-
 [sub_resource type="Gradient" id="Gradient_ryguw"]
 colors = PackedColorArray(0.24705882, 1, 1, 1, 0, 0, 0, 0)
 
@@ -351,32 +345,7 @@ limit_bottom = 1198
 position = Vector2(-247, -58)
 script = ExtResource("19_82xsv")
 
-[node name="platform" type="StaticBody2D" parent="." unique_id=1553407711]
-script = ExtResource("21_d13ii")
-
-[node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=2110839769]
-position = Vector2(127, -8)
-texture = ExtResource("20_getpj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=1086223683]
-position = Vector2(126.5, 5.5)
-shape = SubResource("RectangleShape2D_82xsv")
-
-[node name="Area2D" type="Area2D" parent="platform" unique_id=1072654145]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platform/Area2D" unique_id=653143647]
-position = Vector2(113, 8)
-polygon = PackedVector2Array(0, 0, 4, -6, 23, -6, 27, 0)
-
-[node name="platform2" type="Sprite2D" parent="platform" unique_id=992422021]
-z_index = -1
-position = Vector2(126, -9)
-texture = ExtResource("21_ryguw")
-
-[node name="e" type="Sprite2D" parent="platform" unique_id=1359941940]
-position = Vector2(126.999985, -36.00001)
-scale = Vector2(0.02999995, 0.02999995)
-texture = ExtResource("23_d13ii")
+[node name="platform" parent="." unique_id=1550666870 instance=ExtResource("20_82xsv")]
 
 [node name="CPUParticles2D_eau" type="CPUParticles2D" parent="." unique_id=925539673]
 position = Vector2(1437, 695)
