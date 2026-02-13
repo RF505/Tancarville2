@@ -196,7 +196,7 @@ limit_bottom = 1198
 
 [node name="4" type="Sprite2D" parent="." unique_id=86072792]
 z_index = -2
-position = Vector2(541, 251)
+position = Vector2(542, 252)
 texture = ExtResource("2_0xm2m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=513802411]
@@ -265,35 +265,32 @@ polygon = PackedVector2Array(-372.83057, 230.61987, -456.8999, 308.7329, -299.72
 z_index = -1
 texture = ExtResource("11_efxa6")
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=207928517 node_paths=PackedStringArray("corde_node", "attache_plafond")]
-position = Vector2(980, -39)
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=207928517 node_paths=PackedStringArray("corde_node")]
+position = Vector2(542, 252)
 script = ExtResource("12_ycdy4")
+vitesse = null
+temps_pause = null
 corde_node = NodePath("../pointAttache/Line2D")
-attache_plafond = NodePath("../pointAttachePlafond")
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=906803062]
-position = Vector2(-6, 18)
+position = Vector2(432.99997, -274)
 scale = Vector2(0.44083288, 0.47921884)
 texture = ExtResource("12_dg77c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatableBody2D" unique_id=637852005]
-position = Vector2(-140, 74)
-scale = Vector2(1.0142301, 0.99999994)
-polygon = PackedVector2Array(102.270996, -14.271088, 167.38261, -14.271088, 171.271, -14.271088, 171.271, -12.271088, 102.270996, -12.271088)
+position = Vector2(300.729, -217.72891)
+polygon = PackedVector2Array(102.270996, -14.271088, 171.271, -14.271088, 171.271, -12.271088, 102.270996, -12.271088)
 
 [node name="RayCast2Djoueur" type="RayCast2D" parent="AnimatableBody2D" unique_id=1774182131]
-position = Vector2(-1, 61)
+position = Vector2(438, -231)
 target_position = Vector2(0, -15)
 
 [node name="RayCast2Dsol" type="RayCast2D" parent="AnimatableBody2D" unique_id=1968286300]
-position = Vector2(-1, 62)
+position = Vector2(438, -231)
 target_position = Vector2(0, 10)
 
 [node name="WaitTimer" type="Timer" parent="AnimatableBody2D" unique_id=1908757878]
 one_shot = true
-
-[node name="pointAttachePlafond" type="Node2D" parent="." unique_id=475513639]
-position = Vector2(979, -75)
 
 [node name="pointAttache" type="Node2D" parent="." unique_id=821916263]
 position = Vector2(979, -75)
