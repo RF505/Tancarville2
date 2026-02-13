@@ -12,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://ctim12q0kvg7u" path="res://Tilemap/asset/bbois.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://d0at5gh14cy2l" path="res://Tilemap/asset/bateau.png" id="11_efxa6"]
 [ext_resource type="Texture2D" uid="uid://dtlntpb3qnsxb" path="res://Tilemap/asset/plateforme.png" id="12_dg77c"]
-[ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
+[ext_resource type="Script" path="res://animatable_body_2d.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ccd0pixci0bws" path="res://Tilemap/asset/corde.png" id="14_w48qg"]
+[ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="15_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("3_h2yge")
@@ -182,18 +184,6 @@ sources/0 = SubResource("TileSetAtlasSource_efxa6")
 [node name="Main" type="Node2D" unique_id=1502451694]
 position = Vector2(571, 310)
 
-[node name="Player" parent="." unique_id=1143294335 instance=ExtResource("1_ig7tw")]
-position = Vector2(-298, -32)
-scale = Vector2(0.5, 0.5)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1911989756]
-position = Vector2(83, 40)
-zoom = Vector2(3, 3)
-limit_left = 7
-limit_top = 56
-limit_right = 2108
-limit_bottom = 1198
-
 [node name="4" type="Sprite2D" parent="." unique_id=86072792]
 z_index = -2
 position = Vector2(541, 251)
@@ -302,3 +292,22 @@ position = Vector2(979, -75)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 4.0
 texture = ExtResource("14_w48qg")
+
+[node name="Game" type="Node2D" parent="." unique_id=125142646]
+script = ExtResource("15_2cqfq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Game" unique_id=741738136]
+
+[node name="DialogueBox" parent="Game/CanvasLayer" unique_id=839132959 instance=ExtResource("15_vivmo")]
+
+[node name="Player" parent="Game" unique_id=1143294335 instance=ExtResource("1_ig7tw")]
+position = Vector2(-298, -32)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="Game/Player" unique_id=1911989756]
+position = Vector2(83, 40)
+zoom = Vector2(3, 3)
+limit_left = 7
+limit_top = 56
+limit_right = 2108
+limit_bottom = 1198
