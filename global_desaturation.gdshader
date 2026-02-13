@@ -1,25 +1,38 @@
 shader_type canvas_item;
 
-uniform vec2 player_position; // Reçoit le normalized_pos du script
-uniform float mask_radius = 0.15; // Rayon (entre 0.0 et 1.0)
-uniform float feather = 0.05;
+uniform vec2 player_position; // Position du joueur en UV normalisées
+uniform float radius = 0.15;    
+uniform float feather = 0.05;   
 
 void fragment() {
     vec4 color = texture(TEXTURE, UV);
     
-    // Calcul de la distance en tenant compte du ratio de l'écran
-    float aspect_ratio = SCREEN_PIXEL_SIZE.y / SCREEN_PIXEL_SIZE.x;
-    vec2 diff = SCREEN_UV - player_position;
-    diff.x *= aspect_ratio; 
-    float dist = length(diff);
+    // Calcul de la distance entre le pixel actuel et le joueur
+    float dist = distance(SCREEN_UV, player_position);
     
-    // 0.0 au centre (joueur), 1.0 à l'extérieur
-    float mask = smoothstep(mask_radius, mask_radius + feather, dist);
+    // INVERSÉ : mask = 0 autour du joueur, mask = 1 loin du joueur
+    float mask = smoothstep(radius - feather, radius, dist);
     
-    // Exemple d'effet : le shader rend la tilemap rouge
-    vec3 effect_color = vec3(1.0, 0.0, 0.0) * color.rgb;
+    // --- EFFET CALQUE ---
+    // Option 1 : Noir et blanc
+    float gray = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+    vec3 filtered_color = vec3(gray);
     
-    // Mix : si mask = 0 (proche joueur), on garde color.rgb (original)
-    COLOR.rgb = mix(color.rgb, effect_color, mask);
+    // Option 2 : Teinte sépia (décommentez pour tester)
+    // vec3 filtered_color = vec3(
+    //     dot(color.rgb, vec3(0.393, 0.769, 0.189)),
+    //     dot(color.rgb, vec3(0.349, 0.686, 0.168)),
+    //     dot(color.rgb, vec3(0.272, 0.534, 0.131))
+    // );
+    
+    // Option 3 : Teinte bleue froide (décommentez pour tester)
+    // vec3 filtered_color = color.rgb * vec3(0.7, 0.8, 1.0);
+    
+    // Option 4 : Assombri (décommentez pour tester)
+    // vec3 filtered_color = color.rgb * 0.5;
+    
+    // Mélange : mask = 0 (près du joueur) = couleur normale
+    //           mask = 1 (loin du joueur) = filtre appliqué
+    COLOR.rgb = mix(color.rgb, filtered_color, mask);
     COLOR.a = color.a;
 }

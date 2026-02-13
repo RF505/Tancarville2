@@ -42,7 +42,7 @@ sources/0 = SubResource("TileSetAtlasSource_074og")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d13ii"]
 shader = ExtResource("11_getpj")
 shader_parameter/player_position = Vector2(0, 0)
-shader_parameter/mask_radius = 100.0
+shader_parameter/radius = 0.15
 shader_parameter/feather = 50.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
@@ -150,7 +150,7 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1u8w0"]
 shader = ExtResource("11_getpj")
 shader_parameter/player_position = Vector2(0, 0)
-shader_parameter/mask_radius = 100.0
+shader_parameter/radius = 0.15
 shader_parameter/feather = 50.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efxa6"]
