@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://btv0eyo3jdem6" path="res://Tilemap/asset/broken house 5.png" id="23_0odxb"]
 [ext_resource type="Texture2D" uid="uid://blcmx071xv1u3" path="res://Tilemap/asset/broken maison 4.png" id="24_lswn8"]
 [ext_resource type="Texture2D" uid="uid://dombtmloumf1t" path="res://Tilemap/asset/linge sale.png" id="25_a6jrf"]
-[ext_resource type="PackedScene" uid="uid://35xwc0ce30co" path="res://static_body_2d.tscn" id="28_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://u4uwyqxlyan" path="res://static_body_2d_2.tscn" id="29_kq58d"]
 [ext_resource type="Texture2D" uid="uid://lqk8fbinvapl" path="res://Ressource/Maison1.png" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://c3rcmxro1xiqv" path="res://Ressource/Maison3.png" id="31_htxhm"]
@@ -369,7 +368,7 @@ zoom = Vector2(3, 3)
 limit_left = 7
 limit_top = 56
 limit_right = 2108
-limit_bottom = 1198
+limit_bottom = 1142
 
 [node name="Son" type="AudioStreamPlayer" parent="Game/Player" unique_id=792291686]
 stream = ExtResource("19_a6jrf")
@@ -435,8 +434,6 @@ shape = SubResource("RectangleShape2D_1u8w0")
 stream = ExtResource("22_d13ii")
 
 [node name="platform" parent="." unique_id=1550666870 instance=ExtResource("20_82xsv")]
-
-[node name="StaticBody2D" parent="." unique_id=1635569003 instance=ExtResource("28_qsp4k")]
 
 [node name="StaticBody2D2" parent="." unique_id=838794555 instance=ExtResource("29_kq58d")]
 
