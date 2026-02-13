@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://2ord84kd6it4"]
+
+[ext_resource type="Script" uid="uid://bxvu4drn7vovt" path="res://credits.gd" id="1_nm7lk"]
+
+[node name="Credits" type="Node2D" unique_id=966124308]
+
+[node name="Label" type="Label" parent="." unique_id=1626448866]
+offset_top = 646.0
+offset_right = 1148.0
+offset_bottom = 2437.0
+text = "CRÉDITS
+
+DIRECTION GÉNÉRALE
+Producteur : Yoann 💪
+
+GAME DESIGN
+Game Designer en Chef : Lucas
+Lead Game Designer : Martin
+Game Designer Junior : Loïc
+Concepteur de Frustrations : Loïc
+
+PROGRAMMATION
+Directeur Technique : Yoann
+Programmeur Principal : Yoann
+Développeur secondaire : Martin
+Développeur de Bugs : Lucas
+
+DIRECTION ARTISTIQUE
+Directeur Artistique : Loïc
+Chef Artiste 2D : Loïc
+Illustrateur Conceptuel : Martin
+Dessinateur de Pixels : Loïc
+Penseur fou : Lucas
+
+ANIMATION
+Animateur Principal : Yoann
+Animateur de Sprites : Yoann
+Rigger d'Animations : Yoann
+Créateur de Mouvements Étranges : Yoann...
+
+LEVEL DESIGN
+Lead Level Designer : Martin
+Designer de Niveaux : Loïc
+
+AUDIO
+Sound Designer : Lucas
+
+ÉCRITURE
+Scénariste en Chef : Lucas
+Scénariste fou : Lucas
+Rédacteur de Textes : Lucas
+Inventeur de 99% du travail : Lucas
+
+MARKETING & COMMUNICATION
+Responsable Marketing : Yoann
+Community Manager : Yoann
+Créateur de GIFs : Yoann
+Expert en Memes : Martin
+
+REMERCIEMENTS SPÉCIAUX
+AE2I : RedBull
+Motivateur de Minuit : Pierre Pasqualini
+Celui qui savais pas que son micro sur BRAS pouvais bouger : Martin
+Celui qui n'est pas concentré de 17h à 21h mais qui taff de 21h à 16h : Yoann
+Celui qui nous a donner une histoire pour commencer a travail qui était objectivement trop longue mais bon c'est pas grave je pense qu'on l'aime 
+quand même mais faut pas qu'il abuse c'est vraiment trop long alors que moi je vais directement au but... : Lucas
+Le dormeur fou : Loïc
+
+INGRATITUDE SPÉCIAL
+Les personnes qui ne font pas de tuto pour faire un ascenseur
+
+
+Un jeu créé avec passion, caféine et désespoir
+par Yoann, Martin, Loïc et Lucas
+
+Merci d'avoir joué !
+
+
+© 2025 - Tous droits réservés (sauf les bugs, ils sont gratuits)"
+horizontal_alignment = 1
+script = ExtResource("1_nm7lk")

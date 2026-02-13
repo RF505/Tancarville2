@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://8t1j3smolpld"]
+
+[ext_resource type="Texture2D" uid="uid://ja3g3i32y3ad" path="res://Pixel map/Pixel Platformer Pack/Grey32.png" id="1_gku1a"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qw4ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o16t3"]
+size = Vector2(457, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24ots"]
+size = Vector2(20, 262)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=825217385]
+physics_material_override = SubResource("PhysicsMaterial_qw4ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=885129910]
+position = Vector2(229, 182)
+shape = SubResource("RectangleShape2D_o16t3")
+debug_color = Color(0.15007526, 0.15007514, 0.15007517, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=214237645]
+position = Vector2(0, 121)
+shape = SubResource("RectangleShape2D_24ots")
+debug_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=4755361]
+position = Vector2(228.5, -3)
+shape = SubResource("RectangleShape2D_o16t3")
+debug_color = Color(0.15007526, 0.15007514, 0.15007517, 1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1591865995]
+position = Vector2(459, 90)
+shape = SubResource("RectangleShape2D_24ots")
+debug_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=679401119]
+position = Vector2(226.274, -8)
+scale = Vector2(15.439, 1)
+texture = ExtResource("1_gku1a")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1160944010]
+position = Vector2(229, 188)
+scale = Vector2(15.439, 1)
+texture = ExtResource("1_gku1a")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=932090436]
+position = Vector2(457, 86)
+scale = Vector2(1, 7.53125)
+texture = ExtResource("1_gku1a")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1318587235]
+position = Vector2(-6, 88)
+scale = Vector2(1, 7.53125)
+texture = ExtResource("1_gku1a")
