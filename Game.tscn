@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://utgvx6tyq52s"]
+
+[ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="1_u44n3"]
+[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://58xaamdgpjyu" path="res://Player/Player.tscn" id="2_xkndl"]
+
+[node name="Game" type="Node2D" unique_id=1325871310]
+script = ExtResource("1_u44n3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=481286102]
+
+[node name="DialogueBox" parent="CanvasLayer" unique_id=1151851591 instance=ExtResource("1_wbfu4")]
+
+[node name="CharacterBody2D" parent="." unique_id=1143294335 instance=ExtResource("2_xkndl")]
