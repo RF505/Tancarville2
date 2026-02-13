@@ -432,6 +432,6 @@ stream = ExtResource("22_d13ii")
 position = Vector2(517, 665)
 
 [node name="platform2" parent="." unique_id=117194227 instance=ExtResource("20_82xsv")]
-position = Vector2(699, 17)
+position = Vector2(697, 17)
 
 [node name="platform" parent="." unique_id=1550666870 instance=ExtResource("20_82xsv")]
