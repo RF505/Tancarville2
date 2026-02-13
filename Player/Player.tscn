@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vnjb85ba4kn" path="res://Player/player.gd" id="1_q3lat"]
 [ext_resource type="Texture2D" uid="uid://swxdo3dhk2pe" path="res://Pixel map/Pixel Platformer Pack/SpriteIDLERUN.png" id="2_q3lat"]
+[ext_resource type="AudioStream" uid="uid://cr56qckcq347b" path="res://foot_grass.wav" id="3_tok1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rwas"]
 size = Vector2(27.75, 32.5)
@@ -43,7 +44,12 @@ tracks/0/keys = {
 resource_name = "run"
 length = 0.95
 loop_mode = 1
-step = 0.1
+step = 2.0
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"new_marker",
+"time": 0.505
+}]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -79,3 +85,6 @@ hframes = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=957387705]
 libraries/ = SubResource("AnimationLibrary_8g4oa")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1749265030]
+stream = ExtResource("3_tok1r")
