@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://dhuybbnm8k67v" path="res://animatable_body_2d.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ccd0pixci0bws" path="res://Tilemap/asset/corde.png" id="14_w48qg"]
 [ext_resource type="Script" uid="uid://cp0ypfdr3cpka" path="res://GameScene.gd" id="15_2cqfq"]
-[ext_resource type="PackedScene" path="res://DialogueBox.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
 [ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
@@ -201,6 +201,9 @@ sources/0 = SubResource("TileSetAtlasSource_efxa6")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
 size = Vector2(27, 5)
 
+[sub_resource type="Gradient" id="Gradient_ryguw"]
+colors = PackedColorArray(0.24705882, 1, 1, 1, 0, 0, 0, 0)
+
 [node name="Main" type="Node2D" unique_id=1502451694]
 position = Vector2(571, 310)
 
@@ -368,3 +371,23 @@ polygon = PackedVector2Array(0, 0, 4, -5, 23, -5, 27, 0)
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(126, -9)
 texture = ExtResource("21_ryguw")
+
+[node name="CPUParticles2D_eau" type="CPUParticles2D" parent="." unique_id=925539673]
+position = Vector2(1437, 695)
+amount = 15
+lifetime = 1.1
+preprocess = 1.38
+speed_scale = 0.75
+explosiveness = 0.85
+randomness = 0.82
+lifetime_randomness = 0.51
+emission_shape = 3
+emission_rect_extents = Vector2(100, 1)
+direction = Vector2(-1, 0)
+spread = 100.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 27.78
+initial_velocity_max = 27.78
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+color_ramp = SubResource("Gradient_ryguw")
