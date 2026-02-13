@@ -1,11 +1,15 @@
 extends Area2D
 
-@onready var music = $AudioStreamPlayer2D
+@onready var audio_player = $AudioStreamPlayer2D
+
+func _ready():
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
-		music.play()
+	print("Quelque chose entre dans la zone: ", body.name)
+	audio_player.play()
 
 func _on_body_exited(body):
-	if body.is_in_group("player"):
-		music.stop()
+	print("Quelque chose sort de la zone: ", body.name)
+	audio_player.stop()
