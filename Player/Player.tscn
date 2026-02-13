@@ -57,11 +57,30 @@ tracks/0/keys = {
 "values": [5, 6, 7, 8, 9]
 }
 
+[sub_resource type="Animation" id="Animation_8g4oa"]
+resource_name = "sing"
+length = 5.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 4.6, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8g4oa"]
 _data = {
 &"RESET": SubResource("Animation_tok1r"),
 &"idle": SubResource("Animation_ddoul"),
-&"run": SubResource("Animation_q3lat")
+&"run": SubResource("Animation_q3lat"),
+&"sing": SubResource("Animation_8g4oa")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1143294335]
@@ -75,7 +94,7 @@ shape = SubResource("RectangleShape2D_0rwas")
 position = Vector2(27.750008, 53.25002)
 scale = Vector2(1.7656245, 1.7656245)
 texture = ExtResource("2_q3lat")
-hframes = 10
+hframes = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=957387705]
 libraries/ = SubResource("AnimationLibrary_8g4oa")

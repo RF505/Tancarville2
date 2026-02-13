@@ -7,6 +7,8 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -200.0
 const MAX_STEP_HEIGHT = 5
 
+var sur_platform = false
+
 func _physics_process(delta: float) -> void:
 	# --- Gravité ---
 	if not is_on_floor():
@@ -22,7 +24,9 @@ func _physics_process(delta: float) -> void:
 
 	# --- Animations ---
 	if Input.is_action_just_pressed("sing"):
-		anim.play("sing")
+		print("Touche E pressée. Sur platform ? ", sur_platform)
+		if sur_platform:
+			anim.play("sing")
 	elif direction != 0:
 		if anim.current_animation != "run":
 			anim.play("run")
@@ -42,3 +46,12 @@ func _physics_process(delta: float) -> void:
 			position.y -= 1
 			if not test_move(global_transform, Vector2(direction * 1, 0)):
 				break
+
+	# --- Animation opacité platform2 ---
+	var platform = get_node_or_null("../platform")
+	if platform and platform.has_node("platform2"):
+		var platform2 = platform.get_node("platform2")
+		if sur_platform:
+			platform2.modulate.a = move_toward(platform2.modulate.a, 1.0, delta * 2.0)
+		else:
+			platform2.modulate.a = move_toward(platform2.modulate.a, 0.0, delta * 2.0)
