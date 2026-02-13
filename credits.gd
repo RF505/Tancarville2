@@ -1,7 +1,7 @@
 extends Label
 
 # Vitesse de défilement (ajustez selon vos besoins)
-@export var vitesse_defilement: float = 50.0
+@export var vitesse_defilement: float = 100.0
 
 # Position de départ (en dehors de l'écran en bas)
 var position_depart: float

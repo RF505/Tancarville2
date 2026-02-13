@@ -5,9 +5,10 @@
 [node name="Credits" type="Node2D" unique_id=966124308]
 
 [node name="Label" type="Label" parent="." unique_id=1626448866]
-offset_top = 646.0
-offset_right = 1148.0
-offset_bottom = 2437.0
+offset_left = 476.0
+offset_top = 1087.0
+offset_right = 2042.0
+offset_bottom = 3530.1235
 text = "CRÉDITS
 
 DIRECTION GÉNÉRALE

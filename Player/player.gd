@@ -24,6 +24,17 @@ var object_xx = null
 var object_yy = null
 var object_zz = null
 var object_aa = null
+var object_xxx = null
+var object_yyy = null
+var object_zzz = null
+var object_aaa = null
+var object_bbb = null
+var object_xxxx = null
+var object_yyyy = null
+var object_zzzz = null
+var object_aaaa = null
+var object_bbbb = null
+
 
 func _ready():
 	await get_tree().process_frame
@@ -36,6 +47,16 @@ func _ready():
 	object_yy = get_node_or_null("../../../Main/Maison7")
 	object_zz = get_node_or_null("../../../Main/Maison8")
 	object_aa = get_node_or_null("../../../Main/Maison9")
+	object_xxx = get_node_or_null("../../../Main/Maison")
+	object_yyy = get_node_or_null("../../../Main/Maison2")
+	object_zzz = get_node_or_null("../../../Main/Maison3")
+	object_aaa = get_node_or_null("../../../Main/Maison4")
+	object_bbb = get_node_or_null("../../../Main/Maison5")
+	object_xxxx = get_node_or_null("../../../Main/Maison10")
+	object_yyyy = get_node_or_null("../../../Main/Maison11")
+	object_zzzz = get_node_or_null("../../../Main/Maison12")
+	object_aaaa = get_node_or_null("../../../Main/Maison13")
+	object_bbbb = get_node_or_null("../../../Main/Maison14")
 	
 	if object_x:
 		print("✅ Objet X trouvé")
@@ -224,6 +245,96 @@ func start_singing():
 	if object_aa:
 		object_aa.visible = true
 		print("👻 Objet AA affiché")
+	if object_xxx:
+		object_xxx.visible = false
+		print("👻 Objet X caché")
+	if object_yyy:
+		object_yyy.visible = false
+		print("👻 Objet Y caché")
+	if object_zzz:
+		object_zzz.visible = false
+		print("👻 Objet Z caché")
+	if object_aaa:
+		object_aaa.visible = false
+		print("👻 Objet A caché")
+	if object_bbb:
+		object_bbb.visible = false
+		print("👻 Objet A caché")
+	if object_xxxx:
+		object_xxxx.visible = true
+		print("👻 Objet XX affiché")
+	if object_yyyy:
+		object_yyyy.visible = true
+		print("👻 Objet YY affiché")
+	if object_zzzz:
+		object_zzzz.visible = true
+		print("👻 Objet ZZ affiché")
+	if object_aaaa:
+		object_aaaa.visible = true
+		print("👻 Objet AA affiché")
+	if object_bbbb:
+		object_bbbb.visible = true
+		print("👻 Objet AA affiché")
+	
+		stop_singing()
+		await get_tree().create_timer(20).timeout
+		# CACHER LES 4 OBJETS
+	if object_x:
+		object_x.visible = true
+		print("👻 Objet X caché")
+	if object_y:
+		object_y.visible = true
+		print("👻 Objet Y caché")
+	if object_z:
+		object_z.visible = true
+		print("👻 Objet Z caché")
+	if object_a:
+		object_a.visible = true
+		print("👻 Objet A caché")
+	if object_xx:
+		object_xx.visible = false
+		print("👻 Objet XX affiché")
+	if object_yy:
+		object_yy.visible = false
+		print("👻 Objet YY affiché")
+	if object_zz:
+		object_zz.visible = false
+		print("👻 Objet ZZ affiché")
+	if object_aa:
+		object_aa.visible = false
+		print("👻 Objet AA affiché")
+	if object_xxx:
+		object_xxx.visible = true
+		print("👻 Objet X caché")
+	if object_yyy:
+		object_yyy.visible = true
+		print("👻 Objet Y caché")
+	if object_zzz:
+		object_zzz.visible = true
+		print("👻 Objet Z caché")
+	if object_aaa:
+		object_aaa.visible = true
+		print("👻 Objet A caché")
+	if object_bbb:
+		object_bbb.visible = true
+		print("👻 Objet A caché")
+	if object_xxxx:
+		object_xxxx.visible = false
+		print("👻 Objet XX affiché")
+	if object_yyyy:
+		object_yyyy.visible = false
+		print("👻 Objet YY affiché")
+	if object_zzzz:
+		object_zzzz.visible = false
+		print("👻 Objet ZZ affiché")
+	if object_aaaa:
+		object_aaaa.visible = false
+		print("👻 Objet AA affiché")
+	if object_bbbb:
+		object_bbbb.visible = false
+		print("👻 Objet AA affiché")
+	
+	
 	
 	# Activer l'effet shader
 	if shader_global:
