@@ -18,8 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://blk3dnh1fpixr" path="res://DialogueBox.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cda1osyjwq2ag" path="res://Tilemap/Tileset/tile_eau.png" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://bio5qmr3il8k3" path="res://Boat collision easter egg.tscn" id="18_cegan"]
-[ext_resource type="Script" path="res://easter_egg.gd" id="19_82xsv"]
-[ext_resource type="PackedScene" uid="uid://2ux7efy4b6gg" path="res://platform.tscn" id="20_82xsv"]
+[ext_resource type="Script" uid="uid://0ujn1wpg0kxg" path="res://easter_egg.gd" id="19_82xsv"]
+[ext_resource type="PackedScene" path="res://platform.tscn" id="20_82xsv"]
+[ext_resource type="Script" uid="uid://btpll384encv5" path="res://area_2d.gd" id="21_ryguw"]
+[ext_resource type="AudioStream" uid="uid://biweo12mrvp42" path="res://song/videoplayback.wav" id="22_d13ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_074og"]
 texture = ExtResource("17_yaehf")
@@ -199,6 +201,9 @@ sources/0 = SubResource("TileSetAtlasSource_efxa6")
 [sub_resource type="Gradient" id="Gradient_ryguw"]
 colors = PackedColorArray(0.24705882, 1, 1, 1, 0, 0, 0, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u8w0"]
+size = Vector2(585, 170)
+
 [node name="Main" type="Node2D" unique_id=1502451694]
 position = Vector2(571, 310)
 
@@ -366,3 +371,14 @@ initial_velocity_max = 27.78
 angular_velocity_min = -90.0
 angular_velocity_max = 90.0
 color_ramp = SubResource("Gradient_ryguw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=240253926]
+position = Vector2(318, 624)
+script = ExtResource("21_ryguw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=602492860]
+position = Vector2(-29.5, 12)
+shape = SubResource("RectangleShape2D_1u8w0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=2079176540]
+stream = ExtResource("22_d13ii")

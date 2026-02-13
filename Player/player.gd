@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var footsteps = $Footsteps # <-- AJOUTÉ ICI
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -200.0
@@ -94,6 +95,14 @@ func _physics_process(delta: float) -> void:
 		if anim.current_animation != "sing" and anim.current_animation != "idle":
 			anim.play("idle")
 	
+	# --- GESTION DU SON (Ajouté ici) ---
+	if is_on_floor() and direction != 0:
+		if not footsteps.playing:
+			footsteps.play()
+	else:
+		if footsteps.playing:
+			footsteps.stop()
+	
 	# --- Déplacement ---
 	var previous_position = position
 	move_and_slide()
@@ -110,7 +119,7 @@ func _physics_process(delta: float) -> void:
 	if platform2_ref:
 		if sur_platform:
 			platform2_ref.modulate.a = move_toward(platform2_ref.modulate.a, 1.0, delta * 5.0)
-			print("🟢 Opacité platform2 : ", platform2_ref.modulate.a)
+			# print("🟢 Opacité platform2 : ", platform2_ref.modulate.a)
 		else:
 			platform2_ref.modulate.a = move_toward(platform2_ref.modulate.a, 0.0, delta * 5.0)
 	
