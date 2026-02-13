@@ -267,6 +267,7 @@ texture = ExtResource("11_efxa6")
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=207928517]
 position = Vector2(542, 252)
 script = ExtResource("12_ycdy4")
+vitesse = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=906803062]
 position = Vector2(432.99997, -274)
@@ -284,6 +285,3 @@ target_position = Vector2(0, -15)
 [node name="RayCast2Dsol" type="RayCast2D" parent="AnimatableBody2D" unique_id=1968286300]
 position = Vector2(438, -231)
 target_position = Vector2(0, 10)
-
-[node name="WaitTimer" type="Timer" parent="AnimatableBody2D" unique_id=1908757878]
-one_shot = true

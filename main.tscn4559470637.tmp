@@ -284,6 +284,3 @@ target_position = Vector2(0, -15)
 [node name="RayCast2Dsol" type="RayCast2D" parent="AnimatableBody2D" unique_id=1968286300]
 position = Vector2(438, -231)
 target_position = Vector2(0, 10)
-
-[node name="WaitTimer" type="Timer" parent="AnimatableBody2D" unique_id=1908757878]
-one_shot = true
